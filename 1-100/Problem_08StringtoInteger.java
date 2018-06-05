@@ -1,6 +1,6 @@
 
 public class Problem_08StringtoInteger {
-  public int myAtoi(String str) {
+  static public int myAtoi(String str) {
 	  
 	  int i=0;
 	  int flat=1;
@@ -27,7 +27,8 @@ public class Problem_08StringtoInteger {
 		  }
 		  
 		  
-		  else break;
+		  else 
+			  break;
 		  i++;
 	  }
 	  
@@ -36,4 +37,11 @@ public class Problem_08StringtoInteger {
 	  
         return (int) (flat*num);
     }
+  
+   static public void main(String arcs) {
+	   String s="    42";
+	   int i;
+	   i=myAtoi(s);
+	   System.out.println(i);
+   }
 }
