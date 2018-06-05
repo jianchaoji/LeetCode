@@ -11,7 +11,8 @@ public class Problem_08StringtoInteger {
 			  i++;
 			  flat=-1;
 		  }
-		  if(str.charAt(i)=='+') {
+	 
+		  else if(str.charAt(i)=='+') {
 			  i++;
 			  flat=1;
 		  }
@@ -22,26 +23,28 @@ public class Problem_08StringtoInteger {
 	  while(i<str.length()) {
 		  if(str.charAt(i)<='9'&&str.charAt(i)>='0') {
 			  num=num*10+str.charAt(i)-'0';
-			  
-			  if(num>Integer.MAX_VALUE+1)break;
+			  //System.out.println(Integer.MAX_VALUE);
+			  if(num>Integer.MAX_VALUE)break;
+			 // System.out.println(num);
 		  }
 		  
-		  
+		  //System.out.println(num);
 		  else 
 			  break;
 		  i++;
 	  }
 	  
 	  if(flat==1&&num>Integer.MAX_VALUE)return Integer.MAX_VALUE;
-	  if(flat==-1&&num>Integer.MAX_VALUE+1)return Integer.MIN_VALUE;
+	  if(flat==-1&&num>Integer.MAX_VALUE)return Integer.MIN_VALUE;
 	  
         return (int) (flat*num);
     }
   
-   static public void main(String arcs) {
-	   String s="    42";
+    public static void main(String[] arcs) {
+	   String s="-";
 	   int i;
 	   i=myAtoi(s);
+	   
 	   System.out.println(i);
    }
 }
