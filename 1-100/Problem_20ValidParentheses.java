@@ -9,11 +9,14 @@ public class Problem_20ValidParentheses {
 	    	 if(c=='(') {
 	    		 str.push(')');
 	    	 }
-	    	 if(c=='[') {
+	    	 else  if(c=='[') {
 	    		 str.push(']');
 	    	 }
-	    	 if(c=='{') {
-	    		 str.push
+	    	 else if(c=='{') {
+	    		 str.push('}');
+	    	 }
+	    	 else if (str.isEmpty()|| c!=str.pop()){
+	    		 return false; 
 	    	 }
 	     }
 	     
