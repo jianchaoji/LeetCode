@@ -15,7 +15,7 @@ public class Problem_20ValidParentheses {
 	    	 else if(c=='{') {
 	    		 str.push('}');
 	    	 }
-	    	 else if (str.isEmpty()|| c!=str.pop()){
+	    	 else if (str.isEmpty()||c!=str.pop()){
 	    		 return false; 
 	    	 }
 	     }
